@@ -1,11 +1,11 @@
 Group 7 DSF-PT05
 Members
-1.Linet Wangui-Lead
-2.Brian Kanyotu
-3.Esther Gakio
-4.Beryl Wafula
-5.Christine Gitau
-6.Allan Omollo
+1. Linet Wangui-Lead
+2. Brian Kanyotu
+3. Esther Gakio
+4. Beryl Wafula
+5. Christine Gitau
+6. Allan Omollo
 
 PROJECT OVERVIEW:
 What problem is the project aiming at solving?
