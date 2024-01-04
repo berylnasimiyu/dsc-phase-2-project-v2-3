@@ -12,63 +12,81 @@ Members
 PROJECT OVERVIEW:
 
 What problem is the project aiming at solving?
+
 The project purposes to answer the question: "What housing attributes impact the value of houses in King County?"
+
 In analysis, the prices of houses in the county are dynamic and continuously shifts (according to statistics-over the years). This possess a challenge to buyers and sellers in determining house prices. Both are curious to know the predictors of house values in reference to price.
 Every Door Real Estate Agency assumes the challenges faced by its clients (Home buyers, sellers, renters, investors, and businesses) would wish to provide insightful information into how much pre-approval they need for their ideal property.
 To help the Agency realize its set objectives, we will conduct a linear regression analysis.
 We intend to use the analysis to provide recommendations and conclusion about the business problem using evidences from the analysis.
 Who are the beneficials?
 Home buyers, sellers, renters, investors, and businesses
+
 What are the objectives of the analysis?
+
 a. Determining house attributes impacting prices of houses
+
 b. Providing recommendations to guide the process of buying and selling houses
+
 c. Create awareness of the role of regression analysis in enhancing evidence-based decision making processes
 
 Dataset
 
 Briefly provide a description and understanding of the data used in your analysis?
+
 oSource: https://github.com/learn-co-curriculum/dsc-phase-2-project-v2-3/tree/main/data
 oName of data: kc_house_data.csv
 oNature of data: House properties sold from 2014 to 2016
 oData Structure: 21597 observations and 21 columns describing the property attributes
 oSignificance: appropriate and useful for regression analysis since the data suggests correlations between prices and house attributes
+
 What do the different columns describe for King County Data Set?
-1.Id - Unique identifier for a house
-2.Date - Date house was sold
-3.Price - Sale price (prediction target)
-4.Bedrooms - Number of bedrooms
-5.Bathrooms - Number of bathrooms
-6.Sqft_living - Square footage of living space in the home
-7.Sqft_lot - Square footage of the lot
-8.Floors - Number of floors (levels) in house
-9.Waterfront - Whether the house is on a waterfront
+
+1. Id - Unique identifier for a house
+2. Date - Date house was sold
+3. Price - Sale price (prediction target)
+4. Bedrooms - Number of bedrooms
+5. Bathrooms - Number of bathrooms
+6. Sqft_living - Square footage of living space in the home
+7. Sqft_lot - Square footage of the lot
+8. Floors - Number of floors (levels) in house
+9. Waterfront - Whether the house is on a waterfront
 Includes Duwamish, Elliott Bay, Puget Sound, Lake Union, Ship Canal, Lake Washington, Lake Sammamish, other lake, and river/slough waterfronts
-10.View - Quality of view from house
+10. View - Quality of view from house
 Includes views of Mt. Rainier, Olympics, Cascades, Territorial, Seattle Skyline, Puget Sound, Lake Washington, Lake Sammamish, small lake / river / creek, and other
-11.Condition - How good the overall condition of the house is. Related to maintenance of house.
+11. Condition - How good the overall condition of the house is. Related to maintenance of house.
 See the King County Assessor Website for further explanation of each condition code
-12.Grade - Overall grade of the house. Related to the construction and design of the house.
+12. Grade - Overall grade of the house. Related to the construction and design of the house.
 See the King County Assessor Website for further explanation of each building grade code
-13.Sqft_above - Square footage of house apart from basement
-14.Sqft_basement - Square footage of the basement
-15.Yr_built - Year when house was built
-16.Yr_renovated - Year when house was renovated
-17.Zipcode - ZIP Code used by the United States Postal Service
-18.Lat - Latitude coordinate
-19.Long - Longitude coordinate
-20.Sqft_living15 - The square footage of interior housing living space for the nearest 15 neighbors
-21.Sqft_lot15 - The square footage of the land lots of the nearest 15 neighbors
+13. Sqft_above - Square footage of house apart from basement
+14. Sqft_basement - Square footage of the basement
+15. Yr_built - Year when house was built
+16. Yr_renovated - Year when house was renovated
+17. Zipcode - ZIP Code used by the United States Postal Service
+18. Lat - Latitude coordinate
+19. Long - Longitude coordinate
+20. Sqft_living15 - The square footage of interior housing living space for the nearest 15 neighbors
+21. Sqft_lot15 - The square footage of the land lots of the nearest 15 neighbors
+    
 What regression models were used in the project?
+
 a. simple linear regression to form the baseline
 b. Multiple linear regressions (various models were fit and the best model selected)
+
 PROJECT METHODOLOGY
+
 What procedures, tools, and methods did you use?
+
 The project methodology is divident into a pre-preliminary, preliminary, and post-preliminary procedures.
 Pre-preliminary procedures: In this phase, all the necessary libraries were imported and the data loaded using pandas library. The data was then cleaned and wrangled to make it more significant. Additional cleaning including replacing missing values, dropping insignificant data, filling null values, and dropping duplicates using relevant functions and methods was also done to further make the data more valuable.
+
 Preliminary procedures: Data correlation was checked. A baseline constituting simple linear regression model was fit. The model helped develop a multiple linear regression. These models helped predicted the value of houses. Graphical representation of the analysis further enhanced to establish correlation towards determining how house attributes impacted price.
+
 Post-preliminary procedures: In reference to best model, recommendations, explanations, and conclusions were generated in this phase.
 The main tools used in the project includes libaries like matplotlib, numpy, pandas, seaborn, scipy, and others.
+
 RESULTS
+
 The variables 'sqft_living', 'bathrooms', 'sqft_above', 'sqft_living15’, and 'view are the best predictors of house prices in the county. These variables were used to modeling the final multiple regression. The model satisfied all multiple regression assumptions, and p-values for each predictor variable were below .05. The model contained an R-squared of 50.6% and an (MAE) Mean Absolute Error of 0.2994. This tells the model is off by 0.299 thousand dollars in a given prediction
 The project followed the following steps to achieve set goals and objectives
 Pre-preliminary procedures
@@ -85,6 +103,7 @@ f. The whole data set was confirmed clean and ready for modelling using the info
 g. During wrangling, the columns 'zipcode','id', 'lat', 'long', 'yr_renovated', 'yr_built' were observed to be insignificant and consequently were dropped.
 
 Were there any data transformed in the pre-preliminary phase?
+
 While most of the variables were deemed fit for modeling, some data had to be transformed for healthy consumption. Some data had to be transformed to suitable data types. Additional columns were included forming new features. For instance, a column, total_space, was created to include sqft_living and sqft_lot variables. An additional season column was added to analyse how housing prices across the different seasons. The columns were then retained along with the transformed data.
 The data was then check for correlation visually and statistically to determined relevant columns for use in modelling. When checking for correlation, variables than were greater than .5 were considered more correlated to price (with a correlation of 1.0). These variables were retained for machine learning and modelling through a multiple regression analysis. Additionally, the selected variables were checked for skewness. All the variables were skewed and the data was standardized to normal distribution. The outliers were checked and removed to make the regression model for effective. Lastly, variables with categorical data were converted to dummy variables and the data added to the dataframe
 
@@ -111,7 +130,9 @@ Distribution Displot
 
 
 The bathroom variable showed an abnormal 
+
 REGRESSION MODELS
+
 a.Baseline Model
 The model composed of a simple linear regression the based on price vs sqft_living.
 sqft_living showed the highest and strongest correlation hence fit to create a baseline model for the multiple linear regression
