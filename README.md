@@ -1,5 +1,7 @@
 Group 7 DSF-PT05
+
 Members
+
 1. Linet Wangui-Lead
 2. Brian Kanyotu
 3. Esther Gakio
@@ -8,6 +10,7 @@ Members
 6. Allan Omollo
 
 PROJECT OVERVIEW:
+
 What problem is the project aiming at solving?
 The project purposes to answer the question: "What housing attributes impact the value of houses in King County?"
 In analysis, the prices of houses in the county are dynamic and continuously shifts (according to statistics-over the years). This possess a challenge to buyers and sellers in determining house prices. Both are curious to know the predictors of house values in reference to price.
@@ -20,7 +23,9 @@ What are the objectives of the analysis?
 a. Determining house attributes impacting prices of houses
 b. Providing recommendations to guide the process of buying and selling houses
 c. Create awareness of the role of regression analysis in enhancing evidence-based decision making processes
+
 Dataset
+
 Briefly provide a description and understanding of the data used in your analysis?
 oSource: https://github.com/learn-co-curriculum/dsc-phase-2-project-v2-3/tree/main/data
 oName of data: kc_house_data.csv
@@ -84,6 +89,7 @@ While most of the variables were deemed fit for modeling, some data had to be tr
 The data was then check for correlation visually and statistically to determined relevant columns for use in modelling. When checking for correlation, variables than were greater than .5 were considered more correlated to price (with a correlation of 1.0). These variables were retained for machine learning and modelling through a multiple regression analysis. Additionally, the selected variables were checked for skewness. All the variables were skewed and the data was standardized to normal distribution. The outliers were checked and removed to make the regression model for effective. Lastly, variables with categorical data were converted to dummy variables and the data added to the dataframe
 
 Preliminary Procedures
+
 The summary of the transformed data was checked using describe method
 Correlation was checked to establish relationship between variables 
 The aim of the preliminary procedures was to investigate the relationship between property attributes and prices. The relationship between selected variables is summarized in the heat map and graphs seen below. 
@@ -117,10 +123,16 @@ Multiple linear Regression
 
 
 The final model accounts to 50.6% of the variance in price and it’s a good model for use. The mean absolute error is 0.29 providing more evidences that the model is best and fit for use since it is a better improvement of the first model. The model strongly supports alternative and null hypothesis. We found that the p<0.05 which insists that we reject the Null Hypothesis that Price of house are independent. 
+
 RECOMMENDATION
+
 It is highly recommended that the audience focus on the attributes of 'sqft_living', 'bathrooms', 'sqft_above', 'sqft_living15’, and 'view’ when deciding on prices of houses. These variables are the key predictors of house prices in King County. The variables showed strong positive correlations suggesting that an improvement in the variables increases prices. 
 Model Selection. When choosing a model, it's important to balance complexity and performance. Depending on your objectives, you might opt for a simpler model with fewer features, especially if interpretability is a key priority.
+
 LIMITATIONS
+
 The choice of variables included in the models may not be exhaustive. There could be other important factors influencing house prices that are not considered in the current models. 
+
 CONCLUSION
+
 House properties influence prices of houses. The model suggests 'sqft_living', 'bathrooms', 'sqft_above', 'sqft_living15’, and 'view’ influence prices of houses in the county. 
